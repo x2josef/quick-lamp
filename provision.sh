@@ -15,4 +15,4 @@ if ! [ -L /var/www/html ]; then
   ln -fs /vagrant/public /var/www/html
 fi
 
-service apache2 reload
+service apache2 reload && chmod -R 755 /var/www/html/* && chown -R www-data:vagrant /var/www/html/*
